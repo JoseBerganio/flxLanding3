@@ -42,10 +42,13 @@
 			    <label>Your Email: <input type="email" name="email" /></label>
 			  </p>
 			  <p>
-			    <label>You are a: <select name="role[]" multiple>
-			      <option value="client">Client</option>
-			      <option value="freelancer">Freelancer</option>
-			    </select></label>
+			    <div class="form-group">
+				  <label for="role">You are a:</label>
+				  <select id="role" name="role[]" multiple class="form-control">
+				    <option value="client">Client</option>
+				    <option value="freelancer">Freelancer</option>
+				  </select>
+				</div>
 			  </p>
 			  <p>
 			    <label>Message: <textarea name="message"></textarea></label>
@@ -74,4 +77,5 @@
 
 	</body>
 </html>
+
 
