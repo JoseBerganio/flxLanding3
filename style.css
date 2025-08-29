@@ -1,4 +1,4 @@
-/*
+    /*
 Theme Name: Creatify
 Theme URI: https://templatesjungle.com/
 Author: TemplatesJungle
@@ -511,8 +511,10 @@ header#header ul.menu-list {
 nav#navbar {
     display: flex;
     justify-content: space-between;
+    position: sticky;
     align-items: baseline;
     margin-top: 15px;
+    
 }
 #navbar .main-menu {
     margin-right: 65px;
@@ -596,6 +598,7 @@ nav#navbar {
 @media only screen and (max-width: 750px) {
    #navbar .btn-hvr-effect {
       display: none;
+      
   }
   .main-logo {
       width: 10%;
@@ -806,129 +809,6 @@ nav#navbar {
   }
 }
 
-/*----- Services Section
---------------------------------------------------------------*/
-#projects {
-    background-color: #F7F9FD;
-    padding: 130px 0;
-    position: relative;
-    overflow: hidden;
-}
-#projects .grid {
-    justify-content: start;
-    align-items: end;
-}
-#projects .project-style {
-    width: 32%;
-    margin-right: 25px;
-}
-#projects .project-style:last-child {
-    margin-right: 0;
-}
-#projects .project-style figcaption {
-    display: flex;
-    background: #fff;
-    padding: 30px 20px;
-    justify-content: space-between;
-    align-items: center;
-}
-#projects .project-style:hover figcaption {
-    cursor: pointer;
-    background: #F7F9FD;
-}
-#projects .project-style h3 {
-    font-size: 1.2em;
-    text-transform: capitalize;
-    margin: 0;
-}
-#projects .category-title {
-    font-size: 15px;
-}
-
-#projects .slick-dots li button:before {
-    font-size: 40px;
-}
-.tab-content .grid {
-    padding-bottom: 60px;
-}
-#projects .tabs {
-    justify-content: center;
-    margin-bottom: 40px;
-    margin-left: 250px;
-}
-#projects .tabs .tab {
-    padding-right: 30px;
-    color: #acacac;
-}
-#projects .tabs .tab.active, 
-#projects .tabs .tab:hover {
-    color: #000;
-}
-
-#projects .slick-arrow {
-    font-family: "icomoon";
-    position: absolute;
-    bottom: 212px;
-}
-#projects .prev.slick-arrow {
-    content: "\e900";
-    left: -72px;
-}
-#projects .next.slick-arrow {
-    content: "\e901";
-    right: -42px;
-}
-#projects .slick-arrow:hover,
-#projects .slick-arrow:focus{
-   color: #c59d5f;
-}
-#projects .slick-arrow i.icon {
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 1;
-}
-.slick-dots li.slick-active button:before {
-    outline: 2px solid #D7D7D7;
-    border-radius: 50%;
-}
-
-@media only screen and (max-width: 1400px) {
-  #projects .project-style h3 {
-      font-size: 1em;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  #projects .tabs {
-      margin-left: 50px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .project-grid .slick-slide img {
-      width: 100%;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .project-grid img.project-image {
-      height: auto;
-  }
-}
-
-@media only screen and (max-width: 780px) {
-  #projects .tabs {
-      margin-left: 0;
-  }
-  #projects .tabs .tab {
-      font-size: 15px;
-      color: #fff;
-      background: #f3c522;
-      padding: 10px;
-      margin-right: 10px;
-      border-radius: 10px;
-  }
-}
 
 /*----- Testimonial Section
 --------------------------------------------------------------*/
@@ -1052,127 +932,16 @@ nav#navbar {
 }
 
 
-/*----- Affordable Price Section
---------------------------------------------------------------*/
-#price-table {
-    padding-bottom: 80px;
-}
-#price-table .column {
-    width: 32%;
-    padding: 85px 100px;
-    box-shadow: -2px 1px 29px -9px rgb(0 0 0 / 20%);
-    -webkit-box-shadow: -2px 1px 29px -9px rgb(0 0 0 / 20%);
-    -moz-box-shadow: -2px 1px 29px -9px rgba(0,0,0,0.2);
-}
-#price-table .column:hover {
-    cursor: pointer;
-    background: #fcf8ef;
-}
-#price-table .category-title {
-    font-size: 1.5em;
-    font-weight: 600;
-}
-#price-table i.icon {
-    font-size: 4em;
-    color: #EDBD0E;
-    background: #FEF6DB;
-    border-radius: 50%;
-    width: 162px;
-    height: 162px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin: 30px auto;
-}
-#price-table .price strong {
-    font-size: 4.2em;
-}
-#price-table .price {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    margin: 35px 0 60px;
-}
-#price-table sup {
-    font-size: 1.2em;
-    top: -1.5em;  
-}
-#price-table ul li {
-    padding-bottom: 20px;
-    margin-bottom:20px;
-    border-bottom: 1px solid #F8F8F8;
-}
-
-@media only screen and (max-width: 1280px) {
-  #price-table .column {
-      padding: 85px 30px;
-  }
-}
-
-@media only screen and (max-width: 980px) {
-  #price-table .column {
-      width: 50%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  #price-table .column {
-      width: 80%;
-  }
-}
-
-/*----- Blog Section
---------------------------------------------------------------*/
-
-#latest-blog {
-    margin: 100px 0;
-}
-#latest-blog article.column {
-    width: 31%;
-}
-#latest-blog .meta-tag {
-    display: flex;
-    padding-bottom: 20px;
-}
-#latest-blog .meta-date {
-    padding-right: 15px;
-    margin-right: 30px;
-    position: relative;
-}
-#latest-blog .meta-date:before {
-    content: ".";
-    font-size: 81px;
-    color: #ccc;
-    position: absolute;
-    right: -18px;
-    bottom: -14px;
-}
-#latest-blog .post-item {
-    padding: 36px 32px;
-}
-
-@media only screen and (max-width: 999px) {
-  #latest-blog article.column {
-      width: 48%;
-  }
-}
-
-@media only screen and (max-width: 699px) {
-  #latest-blog article.column {
-      width: 100%;
-  }
-}
-
 /*----- Subscribe Section
 --------------------------------------------------------------*/
 #subscribe {
     background-color: #f9f9f9;
     padding: 145px 0;
-    padding-bottom: 10%;
-    padding-top: 10%;
+    padding-bottom: 20%;
+    padding-top: 20%;
 }
 #subscribe .container {
-    max-width: 1200px;
+    max-width: 1200px;  
 }
 #subscribe .section-header {
     width: 30%;
@@ -1180,17 +949,109 @@ nav#navbar {
 }
 #subscribe .subscribe-content {
     width: 44%;
+} 
+
+#subscribe .grid {
+  display: flex;
+  align-items: flex-start;
+   /* space between text & form */
 }
+
+.subscribe-text {
+  flex: 1; /* takes half */
+}
+
+#text-waitlist {
+  font-size: 1.1em;
+  line-height: 2;
+}
+
+.subscribe-form {
+  flex: 1; /* takes half */
+}
+    
+
+/*--- Netlify Form Custom Styles ---*/
 #subscribe form#form {
-    margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 24px 0 rgba(0,0,0,0.07);
+  padding: 40px 32px;
+  max-width: 420px;
+  margin: 40px auto 0 auto;
 }
-#subscribe input[type="text"] {
-    width: 323px;
-    padding: 10px;
-    border: none;
-    background: none;
-    border-bottom: 1px solid #C4C4C4;
-    font-style: italic;
+#subscribe form#form label.form-content {
+  font-family: "Jost", Verdana, sans-serif;
+  font-size: 1.1em;
+  color: #111;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+#subscribe form#form input[type="text"],
+#subscribe form#form input[type="email"],
+#subscribe form#form select,
+#subscribe form#form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #E7EBF1;
+  border-radius: 8px;
+  background: #f7f9fd;
+  font-family: "Jost", Verdana, sans-serif;
+  font-size: 1em;
+  color: #111;
+  margin-top: 6px;
+  margin-bottom: 0;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+#subscribe form#form input[type="text"]:focus,
+#subscribe form#form input[type="email"]:focus,
+#subscribe form#form select:focus,
+#subscribe form#form textarea:focus {
+  border-color: teal;
+  outline: none;
+}
+
+
+#subscribe form#form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+#subscribe form#form button[type="submit"] {
+  background: #111;
+  color: #fff;
+  font-family: "Jost", Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 18px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 10px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+  
+}
+#subscribe form#form button[type="submit"]:hover {
+  background: rgb(255, 255, 255);
+  border: 2px Solid #000;
+  color: #000000;
+}
+#subscribe form#form ::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+@media only screen and (max-width: 767px) {
+  #subscribe form#form {
+    padding: 24px 10px;
+    max-width: 98%;
+  }
 }
 
 @media only screen and (max-width: 1220px) {
@@ -1225,19 +1086,6 @@ nav#navbar {
   }
 }
 
-/*----- Association Section
---------------------------------------------------------------*/
-#association-with {
-    padding: 100px 0;
-}
-#association-with img {
-    opacity: 20%;
-    cursor: pointer;
-    margin: 30px; 
-}
-#association-with img:hover {
-    opacity: 100%;
-}
 
 
 /*----- Footer Section
@@ -1312,4 +1160,8 @@ nav#navbar {
       text-align: center;
   }
 }
+
+/*.main-logo {
+    margin-left: 60%;
+}*/
 
