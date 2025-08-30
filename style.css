@@ -508,101 +508,32 @@ header#header {
 header#header ul.menu-list {
     display: flex;
 }
-nav#navbar {
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    align-items: baseline;
-    margin-top: 15px;
-    
-}
-#navbar .main-menu {
-    margin-right: 65px;
-}
-.main-menu ul.menu-list a {
-    font-size: 16px;
-    font-weight: 400;
-    color: #777;
-    padding: 0 25px;
-}
-.main-menu ul.menu-list a:hover {
-    color: #111;
-}
-.main-menu .hamburger {
-    display: none;
-}
-.main-menu .hamburger .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #053634;
-}
 
 @media only screen and (max-width: 1180px) {
     .main-logo {
       margin: 0 auto;
+      width: 80%;
+      text-align: center;
+      border-bottom: 1px solid #dedede;
     }
-    .main-menu ul.menu-list {
-        position: fixed;
-        top: -500px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-        transition: 0.8s;
-        z-index: 9;
-    }
-    .main-menu .menu-list.responsive {
-        top: 0;
-        background-color: rgba(0,0,0,0.8);
-        padding: 200px 0;
-        height: 100%;
-    }
-    .main-menu .menu-list li.menu-item {
-       margin-bottom: 50px;
-    }
-    #navbar .menu-list.responsive a {
-      font-size: 3.5em;
-      color: #fff;
-      border-bottom: none;
-    }
-    #navbar .menu-list.responsive a:hover {
-      color: #ebb017;
-    }
-    .main-menu .hamburger {
-        display: block;
-        position: fixed;
-        top: 40px;
-        left: 40px;
-        z-index: 9;
-        background: #f8f6f1;
-        padding: 10px;
-        cursor: pointer;
-    }
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
+    
  }
 
 @media only screen and (max-width: 750px) {
-   #navbar .btn-hvr-effect {
-      display: none;
-      
-  }
+   
   .main-logo {
-      width: 10%;
-      text-align: right;
+      width: 90%;
+      text-align: center;
+      border-bottom: 1px solid #dedede;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+   
+  .main-logo {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #dedede;
   }
 }
 
@@ -613,6 +544,7 @@ nav#navbar {
     overflow: hidden;
     padding-bottom: 1%;
     border-bottom: 1px solid #dedede;
+    margin-top: -80px;
     
 }
 #billboard .main-banner {
@@ -810,178 +742,51 @@ nav#navbar {
 }
 
 
-/*----- Testimonial Section
---------------------------------------------------------------*/
-#testimonial {
-    padding: 180px 0;
-    overflow: hidden;
-}
-#testimonial .grid {
-    justify-content: center;
-    position: relative;
-}
-#testimonial .section-header {
-    width: 35%;
-    margin-right: 130px;
-}
-#testimonial .testimonial-content {
-    width: 45%;
-}
-#testimonial .slick-list {
-    overflow: unset;
-}
-#testimonial .testimonial-item {
-    display: flex;
-}
-#testimonial .author-detail {
-    background: #fff;
-    padding: 60px 70px;
-    margin: 0 8px;
-    width: 100%;
-    box-shadow: -2px 1px 29px -9px rgba(0,0,0,0.2);
-    -webkit-box-shadow: -2px 1px 29px -9px rgba(0,0,0,0.2);
-    -moz-box-shadow: -2px 1px 29px -9px rgba(0,0,0,0.2);
-}
-#testimonial .author-detail q {
-    font-size: 18px;
-    line-height: 2;
-}
-#testimonial .author-name {
-    font-size: 1.3em;
-    font-weight: 700;
-    padding: 35px 0 15px 0;
-}
-#testimonial .author-thumb {
-    display: flex;
-    align-items: center;
-    margin-right: -31px;
-    z-index: 2;
-}
-#testimonial .button-container {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    right: 140px;
-}
-#testimonial button.prev.slick-arrow {
-    border-right: 1px solid #E2E2E2;
-    margin-right: 30px;
-    padding-right: 30px;
-}
-.button-container button.slick-arrow {
-    font-size: 1.6em;
-    line-height: 0;
-    font-weight: 900;
-    color: #111;
-}
-.button-container button.slick-arrow:hover,
-.button-container button.slick-arrow:focus {
-    color: #ccc;
-}
-
-@media only screen and (max-width: 1200px) {
-  #testimonial .section-header {
-      margin-right: 50px;
-  }
-}
-
-@media only screen and (max-width: 1040px) {
-  #testimonial .section-header {
-      width: 70%;
-  }
-  #testimonial .testimonial-content {
-      width: 70%;
-  }
-  #testimonial .button-container {
-      right: 160px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  #testimonial .section-header {
-      margin-bottom: 30px;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  #testimonial .grid {
-      justify-content: space-between;
-  }
-  #testimonial .section-header {
-      width: 90%;
-  }
-  #testimonial .testimonial-content {
-      width: 90%;
-  }
-  #testimonial .author-detail {
-      padding: 50px 30px;
-  }
-  #testimonial .author-thumb {
-      display: none;
-  }
-  #testimonial .button-container {
-      right: 210px;
-  }
-  #testimonial button.slick-arrow {
-      font-size: 1em;
-  }
-  #testimonial button.prev.slick-arrow {
-      border-right: none;
-      margin-right: 0;
-  }
-}
-
-
 /*----- Subscribe Section
 --------------------------------------------------------------*/
 #subscribe {
     background-color: #f9f9f9;
     padding: 145px 0;
-    padding-bottom: 20%;
-    padding-top: 20%;
+    padding-bottom: 6%;
+    padding-top: 15%;
 }
 #subscribe .container {
     max-width: 1200px;  
 }
 #subscribe .section-header {
-    width: 30%;
-    margin-right: 300px;
+    width: 35%;
+
 }
-#subscribe .subscribe-content {
-    width: 44%;
+#subscribe .subscribe-form {
+    width: 65%;
+    position: relative;
+    margin-left: 580px;
+    margin-top: -450px;
 } 
 
 #subscribe .grid {
   display: flex;
   align-items: flex-start;
-   /* space between text & form */
+  
 }
 
-.subscribe-text {
-  flex: 1; /* takes half */
+.section-header {
+  font-size: 1.2em;
 }
 
-#text-waitlist {
-  font-size: 1.1em;
-  line-height: 2;
-}
-
-.subscribe-form {
-  flex: 1; /* takes half */
-}
     
 
 /*--- Netlify Form Custom Styles ---*/
 #subscribe form#form {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 2px;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 24px 0 rgba(0,0,0,0.07);
   padding: 40px 32px;
   max-width: 420px;
-  margin: 40px auto 0 auto;
+  margin: 20px auto 0 auto;
 }
 #subscribe form#form label.form-content {
   font-family: "Jost", Verdana, sans-serif;
@@ -1049,40 +854,72 @@ nav#navbar {
 }
 @media only screen and (max-width: 767px) {
   #subscribe form#form {
-    padding: 24px 10px;
+    padding: 24px 15px;
     max-width: 98%;
   }
+  
 }
 
 @media only screen and (max-width: 1220px) {
   #subscribe .section-header {
       width: 35%;
-      margin-right: 150px;
+      margin-right: 1500px;
   }
+  #subscribe .subscribe-form {
+      margin-top: -400px;
+}
 }
 
 @media only screen and (max-width: 1100px) {
   #subscribe .section-header {
     width: 45%;
     margin-right: 30px;
+    
   }
-  #subscribe .subscribe-content {
-      width: 50%;
+  #subscribe .subscribe-form {
+      width: 90%;
+      margin-right: 30px;
+      margin-left: 400px;
+      
+      
   }
 }
+
+
 
 @media only screen and (max-width: 960px) {
     #subscribe input[type="text"] {
       margin-bottom: 10px;
   }
+  #subscribe .subscribe-form {
+      width: 90%;
+      margin-right: 30px;
+      margin-left: 400px;
+      margin-top: -425px;
+  }
+  
+}
+
+@media only screen and (max-width: 950px) {
+
+  #subscribe .subscribe-form {
+      width: 90%;
+      margin-right: 30px;
+      margin-left: 400px;
+      margin-top: -425px;
+  }
+  
 }
 
 @media only screen and (max-width: 767px) {
   #subscribe .section-header {
       width: 90%;
+      margin-top: -50px;
   }
-  #subscribe .subscribe-content {
+  #subscribe .subscribe-form {
       width: 90%;
+      margin-left: 0;
+      margin-top: 20px;
   }
 }
 
@@ -1141,10 +978,13 @@ nav#navbar {
   #footer .footer-menu {
       width: 50%;
       margin-bottom: 30px;
+      border-bottom: 1px solid #dedede;
   }
   #footer .footer-item {
       width: 80%;
       margin-left: 10px;
+
+      margin-top: 20px;
   }
   #footer .footer-item h2 {
       font-size: 2.4em;
