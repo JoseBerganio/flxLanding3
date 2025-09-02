@@ -294,7 +294,8 @@ button {
     align-items: center;
 }
 .btn-subscribe:hover {
-    color: #EBB017;
+    color: #000000;
+    background-color: white;
 }
 .btn-subscribe i.icon {
     font-size: 15px;
@@ -323,10 +324,11 @@ i.icon.icon-ns-arrow-right {
     right: 5px;
     display: block;
     border-radius: 28px;
-    background: rgb(243 197 34);
+    background: rgb(255, 255, 255);
     width: 35px;
     height: 35px;
     transition: all .3s ease;
+    color: black;
   }
 .btn-hvr-effect:hover:before {
     width: 100%;
@@ -555,7 +557,7 @@ header#header ul.menu-list {
     padding: 110px;
 }
 #billboard .banner-content {
-    width: 52%;
+    width: 52%; 
     padding-top: 55px;
     margin-right: 65px;
 }
@@ -743,6 +745,10 @@ header#header ul.menu-list {
   }
   #services .column.odd-column {
       padding-top: 0;
+  }
+
+  #codepng {
+    margin-top: -220px;
   }
 }
 
