@@ -573,6 +573,10 @@ header#header ul.menu-list {
     z-index: 2;
 }
 
+.section-subtitle {
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 1370px) {
   #billboard .main-banner {
       display: flex;
@@ -621,6 +625,7 @@ header#header ul.menu-list {
 @media only screen and (max-width: 500px) {
   #billboard .main-banner {
       width: 480px;
+      margin-top: 100px;
   }
 }
 
