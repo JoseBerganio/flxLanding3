@@ -33,7 +33,10 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #EBB017;
+  color: #000000;
+  background-color: white;
+  transition: 0.15s;
+  border: 1px solid #000000;
 }
 ul, ol {
   margin-top: 0;
@@ -91,12 +94,12 @@ img {
   vertical-align: middle;
 }
 ::selection {
-  background: rgba(0,0,0,0.8);
+  background: teal;
   color: #fff;
   text-shadow: none;
 }
 ::-moz-selection {
-  background: rgba(0,0,0,0.8);
+  background: teal;
   color: #fff;
   text-shadow: none;
 }
@@ -235,6 +238,8 @@ button {
 .btn-wrap a {
     font-weight: 500;
     text-transform: uppercase;
+    border: 1px solid #dedede;
+    border-radius: 10px;
 }
 .btn-normal {
     color: #fff;
@@ -752,6 +757,23 @@ header#header ul.menu-list {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  #services .service-grid {
+      width: 95%;
+      padding-top: 100px;
+  }
+  #services .column {
+      width: 45%;
+  }
+  #services .column.odd-column {
+      padding-top: 0;
+  }
+
+  #codepng {
+    margin-top: -220px;
+  }
+}
+
 
 /*----- Subscribe Section
 --------------------------------------------------------------*/
@@ -856,7 +878,7 @@ header#header ul.menu-list {
 }
 #subscribe form#form button[type="submit"]:hover {
   background: rgb(255, 255, 255);
-  border: 2px Solid #000;
+  border: 1px Solid #000;
   color: #000000;
 }
 #subscribe form#form ::placeholder {
