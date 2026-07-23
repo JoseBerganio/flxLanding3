@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexiwoo — Your AI Accountability Partner for Getting Things Done</title>
+  <meta name="description" content="Flexiwoo is an AI-powered accountability platform that helps you follow through on your commitments. Meet Xiwoo, your AI owl that proactively checks in, tracks goals, and keeps you executing." />
+  <meta name="keywords" content="AI accountability, productivity, goal tracking, Xiwoo, Flexiwoo, AI partner" />
+  <meta property="og:title" content="Flexiwoo — Your AI Accountability Partner" />
+  <meta property="og:description" content="Stop planning. Start executing. Xiwoo, your AI owl accountability partner, helps you follow through every single day." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Particles Canvas -->
+<canvas id="particles-canvas" style="position:fixed;top:0;left:0;pointer-events:none;z-index:0;opacity:0.6;"></canvas>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- NAVIGATION                                                 -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#" id="logo-link" aria-label="Flexiwoo home">
+        <div class="nav__logo-icon">🦉</div>
+        <span class="gradient-text">Flexiwoo</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a class="nav__link" href="#features" data-section="features">Features</a></li>
+        <li><a class="nav__link" href="#how-it-works" data-section="how-it-works">How It Works</a></li>
+        <li><a class="nav__link" href="#xiwoo" data-section="xiwoo">Meet Xiwoo</a></li>
+        <li><a class="nav__link" href="#pricing" data-section="pricing">Pricing</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a class="btn btn-ghost" href="#pricing" id="nav-signin">Sign In</a>
+        <a class="btn btn-primary" href="#waitlist" id="nav-cta">Get Started Free</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+  <button class="mobile-nav__close" id="mobile-close" aria-label="Close menu">✕</button>
+  <a class="mobile-nav__link" href="#features">Features</a>
+  <a class="mobile-nav__link" href="#how-it-works">How It Works</a>
+  <a class="mobile-nav__link" href="#xiwoo">Meet Xiwoo</a>
+  <a class="mobile-nav__link" href="#pricing">Pricing</a>
+  <a class="btn btn-primary" href="#waitlist" style="margin-top:16px;">Get Started Free</a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- HERO                                                       -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="hero" id="home" aria-labelledby="hero-heading">
+  <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+  <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+  <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero__inner">
+      <!-- Left: Copy -->
+      <div class="hero__copy">
+        <div class="hero__badge" aria-label="Beta launch announcement">
+          <span class="hero__badge-dot"></span>
+          Beta launching soon — Join the waitlist
+        </div>
+        <h1 class="hero__title" id="hero-heading">
+          Stop <span id="typewriter" class="gradient-text">Procrastinating</span><br />
+          Start Executing.
+        </h1>
+        <p class="hero__subtitle">
+          Meet <strong style="color:var(--text-primary)">Xiwoo</strong>, your AI owl accountability partner that proactively checks in, tracks your goals, and ensures you follow through — every single day.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn-primary" href="#waitlist" id="hero-cta-primary">
+            🚀 Get Started Free
+          </a>
+          <a class="btn btn-ghost" href="#xiwoo" id="hero-cta-secondary">
+            ▶&nbsp; See Xiwoo in Action
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__ring hero__ring--1"></div>
+        <div class="hero__ring hero__ring--2"></div>
+        <div class="hero__owl-container">
+          <div class="hero__owl-glow"></div>
+          <!-- Xiwoo SVG Owl Mascot -->
+          <svg class="hero__owl-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Xiwoo the owl mascot">
+            <defs>
+              <radialGradient id="bodyGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#1e1b4b"/>
+                <stop offset="100%" stop-color="#0a0d1a"/>
+              </radialGradient>
+              <radialGradient id="eyeLeftGrad" cx="40%" cy="35%" r="60%">
+                <stop offset="0%" stop-color="#a78bfa"/>
+                <stop offset="50%" stop-color="#3b82f6"/>
+                <stop offset="100%" stop-color="#1e1b4b"/>
+              </radialGradient>
+              <radialGradient id="eyeRightGrad" cx="40%" cy="35%" r="60%">
+                <stop offset="0%" stop-color="#22d3ee"/>
+                <stop offset="50%" stop-color="#0ea5e9"/>
+                <stop offset="100%" stop-color="#0369a1"/>
+              </radialGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glowStrong">
+                <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1e3a5f"/>
+                <stop offset="100%" stop-color="#0a1628"/>
+              </linearGradient>
+              <linearGradient id="chestGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#1e3a8a"/>
+                <stop offset="100%" stop-color="#1e1b4b"/>
+              </linearGradient>
+              <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3b82f6"/>
+                <stop offset="100%" stop-color="#22d3ee"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Body shadow glow -->
+            <ellipse cx="150" cy="200" rx="80" ry="20" fill="rgba(59,130,246,0.15)" filter="url(#glow)"/>
+
+            <!-- Wings -->
+            <path d="M95 165 Q60 140 55 200 Q70 230 105 220 Z" fill="url(#wingGrad)" stroke="#1e3a8a" stroke-width="1.5"/>
+            <path d="M205 165 Q240 140 245 200 Q230 230 195 220 Z" fill="url(#wingGrad)" stroke="#1e3a8a" stroke-width="1.5"/>
+            <!-- Wing circuit lines -->
+            <path d="M70 165 L80 185 M65 175 L75 190" stroke="#1e3a8a" stroke-width="1" opacity="0.6"/>
+            <path d="M230 165 L220 185 M235 175 L225 190" stroke="#0c4a6e" stroke-width="1" opacity="0.6"/>
+
+            <!-- Body -->
+            <ellipse cx="150" cy="185" rx="70" ry="80" fill="url(#bodyGrad)"/>
+            <!-- Body outline with gradient stroke -->
+            <ellipse cx="150" cy="185" rx="70" ry="80" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.4"/>
+
+            <!-- Chest pattern -->
+            <ellipse cx="150" cy="195" rx="44" ry="54" fill="url(#chestGrad)" opacity="0.7"/>
+
+            <!-- Circuit board lines on body -->
+            <line x1="120" y1="160" x2="130" y2="160" stroke="#1d4ed8" stroke-width="1" opacity="0.5"/>
+            <line x1="130" y1="160" x2="130" y2="150" stroke="#1d4ed8" stroke-width="1" opacity="0.5"/>
+            <circle cx="130" cy="150" r="2" fill="#3b82f6" opacity="0.7"/>
+            <line x1="170" y1="170" x2="180" y2="170" stroke="#0891B2" stroke-width="1" opacity="0.5"/>
+            <line x1="180" y1="170" x2="180" y2="160" stroke="#0891B2" stroke-width="1" opacity="0.5"/>
+            <circle cx="180" cy="160" r="2" fill="#22d3ee" opacity="0.7"/>
+            <line x1="140" y1="215" x2="160" y2="215" stroke="#1d4ed8" stroke-width="1" opacity="0.4"/>
+            <circle cx="140" cy="215" r="1.5" fill="#3b82f6" opacity="0.6"/>
+            <circle cx="160" cy="215" r="1.5" fill="#22d3ee" opacity="0.6"/>
+
+            <!-- Head -->
+            <ellipse cx="150" cy="120" rx="62" ry="60" fill="url(#bodyGrad)"/>
+            <ellipse cx="150" cy="120" rx="62" ry="60" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.35"/>
+
+            <!-- Ear tufts -->
+            <path d="M110 72 L100 45 L120 65 Z" fill="#1e1b4b" stroke="#1e3a8a" stroke-width="1.5"/>
+            <path d="M190 72 L200 45 L180 65 Z" fill="#1e1b4b" stroke="#1e3a8a" stroke-width="1.5"/>
+            <!-- Tuft accent lines -->
+            <line x1="107" y1="62" x2="103" y2="50" stroke="#1d4ed8" stroke-width="1" opacity="0.5"/>
+            <line x1="193" y1="62" x2="197" y2="50" stroke="#0891B2" stroke-width="1" opacity="0.5"/>
+
+            <!-- Facial disc -->
+            <ellipse cx="150" cy="120" rx="52" ry="50" fill="none" stroke="rgba(59,130,246,0.3)" stroke-width="2"/>
+
+            <!-- Left Eye Socket -->
+            <circle cx="124" cy="115" r="24" fill="#0a0d1a"/>
+            <circle cx="124" cy="115" r="24" fill="none" stroke="#3b82f6" stroke-width="2" filter="url(#glow)" opacity="0.8"/>
+
+            <!-- Right Eye Socket -->
+            <circle cx="176" cy="115" r="24" fill="#0a0d1a"/>
+            <circle cx="176" cy="115" r="24" fill="none" stroke="#22d3ee" stroke-width="2" filter="url(#glow)" opacity="0.8"/>
+
+            <!-- Left Eye Iris -->
+            <circle cx="124" cy="115" r="18" fill="url(#eyeLeftGrad)" filter="url(#glow)"/>
+            <!-- Left Eye shine rings -->
+            <circle cx="124" cy="115" r="12" fill="#1d4ed8" opacity="0.6"/>
+            <circle cx="124" cy="115" r="7" fill="#3b82f6"/>
+            <!-- Left Eye pupil -->
+            <circle cx="124" cy="115" r="4" fill="#0a0d1a"/>
+            <!-- Left Eye glow core -->
+            <circle cx="124" cy="115" r="2" fill="#a78bfa" filter="url(#glowStrong)"/>
+            <!-- Left Eye highlight -->
+            <circle cx="118" cy="109" r="3" fill="rgba(255,255,255,0.6)"/>
+            <circle cx="129" cy="121" r="1.5" fill="rgba(255,255,255,0.3)"/>
+
+            <!-- Right Eye Iris -->
+            <circle cx="176" cy="115" r="18" fill="url(#eyeRightGrad)" filter="url(#glow)"/>
+            <!-- Right Eye shine rings -->
+            <circle cx="176" cy="115" r="12" fill="#0e7490" opacity="0.6"/>
+            <circle cx="176" cy="115" r="7" fill="#22d3ee"/>
+            <!-- Right Eye pupil -->
+            <circle cx="176" cy="115" r="4" fill="#0a0d1a"/>
+            <!-- Right Eye glow core -->
+            <circle cx="176" cy="115" r="2" fill="#22d3ee" filter="url(#glowStrong)"/>
+            <!-- Right Eye highlight -->
+            <circle cx="170" cy="109" r="3" fill="rgba(255,255,255,0.6)"/>
+            <circle cx="181" cy="121" r="1.5" fill="rgba(255,255,255,0.3)"/>
+
+            <!-- Beak -->
+            <path d="M143 130 L150 142 L157 130 Q150 125 143 130 Z" fill="#F59E0B" opacity="0.9"/>
+            <path d="M143 130 L150 136 L157 130" fill="none" stroke="#D97706" stroke-width="1"/>
+
+            <!-- Feet -->
+            <path d="M125 258 L118 270 M125 258 L125 270 M125 258 L132 270" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round"/>
+            <path d="M175 258 L168 270 M175 258 L175 270 M175 258 L182 270" stroke="#0891B2" stroke-width="3" stroke-linecap="round"/>
+
+            <!-- Data glow particles around owl -->
+            <circle cx="60" cy="100" r="3" fill="#3b82f6" opacity="0.7" filter="url(#glow)">
+              <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="240" cy="120" r="2.5" fill="#22d3ee" opacity="0.7" filter="url(#glow)">
+              <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="80" cy="220" r="2" fill="#a78bfa" opacity="0.6" filter="url(#glow)">
+              <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="220" cy="210" r="3" fill="#22d3ee" opacity="0.5" filter="url(#glow)">
+              <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.8s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+
+        <!-- Floating UI Cards -->
+        <div class="hero__float-card hero__float-card--1">
+          <div class="hero__float-label">⏰ Morning Check-in</div>
+          <div class="hero__float-value">Xiwoo: <span class="hero__float-accent">Ready to focus?</span></div>
+        </div>
+        <div class="hero__float-card hero__float-card--2">
+          <div class="hero__float-label">🎯 Goal Progress</div>
+          <div class="hero__float-value">Launch MVP — <span class="hero__float-accent">78% done</span></div>
+        </div>
+        <div class="hero__float-card hero__float-card--3">
+          <div class="hero__float-label">🔥 Streak</div>
+          <div class="hero__float-value"><span class="hero__float-accent">14 days</span> consistent</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- PROBLEM STATEMENT                                          -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="problem section" id="problem" aria-labelledby="problem-heading">
+  <div class="container">
+    <div class="problem__inner">
+      <div class="reveal">
+        <p class="section-tag" aria-hidden="true">⚠ The Productivity Gap</p>
+        <h2 class="problem__headline" id="problem-heading">
+          You know what to do.<br/>You're just not doing it.
+        </h2>
+        <p class="problem__subtext">
+          You already have calendars, task managers, and project boards. The problem isn't organization — it's <strong style="color:var(--text-primary)">execution</strong>. Flexiwoo bridges that gap.
+        </p>
+      </div>
+      <div class="problem__cards">
+        <div class="problem__card reveal reveal-delay-1">
+          <div class="problem__card-icon problem__card-icon--red">😩</div>
+          <h3 class="problem__card-title">Chronic Procrastination</h3>
+          <p class="problem__card-text">Tasks pile up. Deadlines loom. Every day starts with the best intentions — and ends with the same to-do list you had yesterday.</p>
+        </div>
+        <div class="problem__card reveal reveal-delay-2">
+          <div class="problem__card-icon problem__card-icon--orange">📊</div>
+          <h3 class="problem__card-title">No Real Accountability</h3>
+          <p class="problem__card-text">Passive apps wait for you to act. They don't follow up, don't notice when you've gone quiet, and never push back when you skip a commitment.</p>
+        </div>
+        <div class="problem__card reveal reveal-delay-3">
+          <div class="problem__card-icon problem__card-icon--blue">🌀</div>
+          <h3 class="problem__card-title">Overwhelm &amp; Context Loss</h3>
+          <p class="problem__card-text">Switching between five different apps to manage one project. Losing track of where you left off. Starting fresh instead of continuing momentum.</p>
+        </div>
+      </div>
+      <div class="problem__divider reveal">
+        <div class="problem__divider-line"></div>
+        <span class="problem__divider-text">Flexiwoo changes everything</span>
+        <div class="problem__divider-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- FEATURES — BENTO GRID                                      -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="features section" id="features" aria-labelledby="features-heading">
+  <div class="container container--wide">
+    <div class="features__header reveal">
+      <p class="section-tag" aria-hidden="true">✦ Core Features</p>
+      <h2 class="section-title" id="features-heading">
+        Everything you need to <span class="gradient-text">actually execute</span>
+      </h2>
+      <p class="section-subtitle">
+        Not another tool to manage. An AI partner that actively participates in your success.
+      </p>
+    </div>
+
+    <div class="bento" role="list" aria-label="Feature highlights">
+
+      <!-- 1: AI Partner (large) -->
+      <article class="bento__item bento__item--1 reveal" role="listitem">
+        <div class="bento__icon bento__icon--violet" aria-hidden="true">🦉</div>
+        <div class="bento__tag">Core Feature</div>
+        <h3 class="bento__title">AI Accountability Partner</h3>
+        <p class="bento__desc">Xiwoo doesn't wait for you. It proactively initiates morning check-ins, evening reflections, goal follow-ups, and encouragement — becoming an active participant in your day.</p>
+        <div class="bento__chat" aria-label="Example Xiwoo conversation">
+          <div class="bento__msg bento__msg--xiwoo">🌅 Good morning! You committed to finishing the proposal today. Let's build a 2-hour focus block right now. Ready?</div>
+          <div class="bento__msg bento__msg--user">Yes! Let's do it.</div>
+          <div class="bento__msg bento__msg--xiwoo">🔒 Focus mode activated. I'll check in at 10:30 AM. You've got this! 💪</div>
+        </div>
+      </article>
+
+      <!-- 2: Smart Goals -->
+      <article class="bento__item bento__item--2 reveal reveal-delay-1" role="listitem">
+        <div class="bento__icon bento__icon--cyan" aria-hidden="true">🎯</div>
+        <div class="bento__tag">Goal Intelligence</div>
+        <h3 class="bento__title">Smart Goal Management</h3>
+        <p class="bento__desc">Set long-term goals. Xiwoo automatically breaks them into actionable tasks, tracks milestones, and adjusts timelines as life happens.</p>
+        <div class="bento__goals" aria-label="Goal progress examples">
+          <div class="bento__goal-item">
+            <span>🚀 Launch MVP</span>
+            <div class="bento__goal-progress"><div class="bento__goal-bar" style="width:78%"></div></div>
+            <span style="font-size:12px;color:var(--primary-light);font-weight:600">78%</span>
+          </div>
+          <div class="bento__goal-item">
+            <span>📝 Write 10 articles</span>
+            <div class="bento__goal-progress"><div class="bento__goal-bar" style="width:60%"></div></div>
+            <span style="font-size:12px;color:var(--primary-light);font-weight:600">6/10</span>
+          </div>
+          <div class="bento__goal-item">
+            <span>💪 Gym 4x/week</span>
+            <div class="bento__goal-progress"><div class="bento__goal-bar" style="width:100%"></div></div>
+            <span style="font-size:12px;color:var(--success);font-weight:600">✓</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3: Context-Aware -->
+      <article class="bento__item bento__item--3 reveal reveal-delay-1" role="listitem">
+        <div class="bento__icon bento__icon--indigo" aria-hidden="true">📸</div>
+        <div class="bento__tag">Context Engine</div>
+        <h3 class="bento__title">Context-Aware Assistance</h3>
+        <p class="bento__desc">Share a screenshot of what you're working on. Xiwoo understands your context instantly and gives tailored coaching without lengthy explanations.</p>
+        <div class="bento__badges">
+          <span class="bento__badge">Screenshots</span>
+          <span class="bento__badge--cyan">Code Review</span>
+          <span class="bento__badge">Writing Check</span>
+          <span class="bento__badge--green">Study Mode</span>
+        </div>
+      </article>
+
+      <!-- 4: Am I doing great -->
+      <article class="bento__item bento__item--4 reveal reveal-delay-2" role="listitem">
+        <div class="bento__icon bento__icon--amber" aria-hidden="true">✨</div>
+        <div class="bento__tag">Progress Review</div>
+        <h3 class="bento__title">"Am I Doing Great?"</h3>
+        <p class="bento__desc">Instant AI review of your current work. Xiwoo analyzes your progress, focus, and next best actions — on demand, in seconds.</p>
+        <div class="bento__stats">
+          <div class="bento__stat">
+            <div class="bento__stat-val">94%</div>
+            <div class="bento__stat-label">Focus score</div>
+          </div>
+          <div class="bento__stat">
+            <div class="bento__stat-val">+23</div>
+            <div class="bento__stat-label">Tasks ahead</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5: Proof-Based -->
+      <article class="bento__item bento__item--5 reveal reveal-delay-3" role="listitem">
+        <div class="bento__icon bento__icon--green" aria-hidden="true">✅</div>
+        <div class="bento__tag">Verification</div>
+        <h3 class="bento__title">Proof-Based Accountability</h3>
+        <p class="bento__desc">Show your work. Submit screenshots, git commits, documents, or published links. Xiwoo validates and records your real progress.</p>
+        <div class="bento__badges">
+          <span class="bento__badge--green">Git Commits</span>
+          <span class="bento__badge">Documents</span>
+          <span class="bento__badge--cyan">Published Work</span>
+        </div>
+      </article>
+
+      <!-- 6: Long-Term Memory -->
+      <article class="bento__item bento__item--6 reveal reveal-delay-1" role="listitem">
+        <div class="bento__icon bento__icon--violet" aria-hidden="true">🧠</div>
+        <div class="bento__tag">Memory</div>
+        <h3 class="bento__title">Long-Term Memory</h3>
+        <p class="bento__desc">Xiwoo remembers everything — goals set months ago, commitments from last week, habits you're building. Accountability that persists across days, weeks, and months without you having to re-explain yourself.</p>
+        <div class="bento__badges">
+          <span class="bento__badge">Goals</span>
+          <span class="bento__badge--cyan">Projects</span>
+          <span class="bento__badge">Habits</span>
+          <span class="bento__badge--green">Milestones</span>
+          <span class="bento__badge">Preferences</span>
+        </div>
+      </article>
+
+      <!-- 7: Execution Sessions + Agent Orchestration (large) -->
+      <article class="bento__item bento__item--7 reveal reveal-delay-2" role="listitem">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;height:100%">
+          <div>
+            <div class="bento__icon bento__icon--cyan" aria-hidden="true">⚡</div>
+            <div class="bento__tag">Execution Mode</div>
+            <h3 class="bento__title">Execution Sessions</h3>
+            <p class="bento__desc">Invite Xiwoo into a focused work session. It keeps you on track, encourages deep work, and checks in at the right moments to help you maintain momentum.</p>
+          </div>
+          <div>
+            <div class="bento__icon bento__icon--rose" aria-hidden="true">🤖</div>
+            <div class="bento__tag">Agent Network</div>
+            <h3 class="bento__title">Flexiwoo Agents</h3>
+            <p class="bento__desc">Behind one conversation, a team of specialized AI agents handles research, scheduling, planning, proof validation, and knowledge retrieval — invisibly.</p>
+            <div class="bento__badges" style="margin-top:12px">
+              <span class="bento__badge">Planner</span>
+              <span class="bento__badge--cyan">Researcher</span>
+              <span class="bento__badge">Scheduler</span>
+              <span class="bento__badge--green">Validator</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- HOW IT WORKS                                               -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="hiw section" id="how-it-works" aria-labelledby="hiw-heading">
+  <div class="container">
+    <div class="hiw__inner">
+      <!-- Steps -->
+      <div class="hiw__steps">
+        <div class="reveal">
+          <p class="section-tag" aria-hidden="true">🗺 How It Works</p>
+          <h2 class="section-title" id="hiw-heading">
+            From commitment<br/>to <span class="gradient-text">completion</span>
+          </h2>
+          <p class="section-subtitle" style="margin-bottom:48px">Three simple steps to transform how you work — forever.</p>
+        </div>
+
+        <div class="hiw__step reveal reveal-delay-1">
+          <div class="hiw__step-left">
+            <div class="hiw__step-num" aria-hidden="true">1</div>
+            <div class="hiw__step-connector" aria-hidden="true"></div>
+          </div>
+          <div class="hiw__step-content">
+            <h3 class="hiw__step-title">Set Your Goals</h3>
+            <p class="hiw__step-desc">Tell Xiwoo what you want to achieve — big or small, short-term or long-term. It breaks everything down into a clear, actionable plan tailored to your life.</p>
+          </div>
+        </div>
+
+        <div class="hiw__step reveal reveal-delay-2">
+          <div class="hiw__step-left">
+            <div class="hiw__step-num" aria-hidden="true">2</div>
+            <div class="hiw__step-connector" aria-hidden="true"></div>
+          </div>
+          <div class="hiw__step-content">
+            <h3 class="hiw__step-title">Xiwoo Checks In</h3>
+            <p class="hiw__step-desc">Throughout your day, Xiwoo proactively reaches out — morning plans, midday check-ins, evening reflections, and follow-ups on everything you committed to.</p>
+          </div>
+        </div>
+
+        <div class="hiw__step reveal reveal-delay-3">
+          <div class="hiw__step-left">
+            <div class="hiw__step-num" aria-hidden="true">3</div>
+            <div class="hiw__step-connector" aria-hidden="true"></div>
+          </div>
+          <div class="hiw__step-content">
+            <h3 class="hiw__step-title">Execute &amp; Grow</h3>
+            <p class="hiw__step-desc">Show your work, celebrate wins, learn from setbacks. Xiwoo builds a picture of your progress and helps you improve week over week, month over month.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone Mockup -->
+      <div class="hiw__visual reveal reveal-delay-2">
+        <div class="hiw__phone" role="img" aria-label="Xiwoo chat interface mockup">
+          <div class="hiw__phone-header">
+            <div class="hiw__phone-avatar" aria-hidden="true">🦉</div>
+            <div>
+              <div class="hiw__phone-name">Xiwoo</div>
+              <div class="hiw__phone-status">Online — Watching your goals</div>
+            </div>
+          </div>
+          <div class="hiw__phone-msgs" role="log" aria-label="Sample conversation">
+            <div class="hiw__phone-msg hiw__phone-msg--xiwoo">
+              🌤️ Good morning! It's Monday. Last week you hit 4 of 5 goals — amazing. Today you have 3 priorities. Want to start with the hardest one?
+            </div>
+            <div class="hiw__phone-msg hiw__phone-msg--user">
+              Yes, let's attack the hard one first.
+            </div>
+            <div class="hiw__phone-msg hiw__phone-msg--xiwoo">
+              💜 Smart. I've blocked 9–11 AM for deep work. No distractions. I'll check in at 11. You already know how to do this — let's go!
+            </div>
+            <div class="hiw__phone-msg hiw__phone-msg--user">
+              Done! Here's the doc I finished. ✅
+            </div>
+            <div class="hiw__phone-msg hiw__phone-msg--xiwoo">
+              🎉 Verified! Marking goal #1 complete. You're on a 15-day streak. One more win like that and you've had your best week ever. Keep going!
+            </div>
+            <div class="hiw__phone-typing" aria-label="Xiwoo is typing">
+              <span>Xiwoo is thinking</span>
+              <div class="hiw__typing-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- CHAT DEMO / MEET XIWOO                                     -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="chat-demo section" id="xiwoo" aria-labelledby="xiwoo-heading">
+  <div class="container">
+    <div class="chat-demo__inner">
+      <!-- Chat Window -->
+      <div class="chat-demo__interface reveal reveal-delay-1">
+        <div class="chat-window" id="chat-window" role="region" aria-label="Live Xiwoo chat demonstration">
+          <div class="chat-window__header">
+            <div class="chat-window__dots" aria-hidden="true">
+              <div class="chat-window__dot chat-window__dot--red"></div>
+              <div class="chat-window__dot chat-window__dot--yellow"></div>
+              <div class="chat-window__dot chat-window__dot--green"></div>
+            </div>
+            <div class="chat-window__title">Xiwoo — AI Accountability Partner</div>
+          </div>
+          <div class="chat-window__body" id="chat-body" role="log" aria-live="polite" aria-label="Chat messages">
+            <!-- Messages injected by JS -->
+          </div>
+          <div class="chat-window__input">
+            <input class="chat-input" type="text" placeholder="Message Xiwoo..." aria-label="Type a message to Xiwoo" id="demo-input" />
+            <button class="chat-send-btn" aria-label="Send message" id="demo-send">➤</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="chat-demo__content reveal">
+        <p class="section-tag" aria-hidden="true">🦉 Meet Xiwoo</p>
+        <h2 class="section-title" id="xiwoo-heading">
+          Your accountability partner is <span class="gradient-text">always on</span>
+        </h2>
+        <p class="section-subtitle">
+          Xiwoo isn't reactive — it's proactive. It reaches out to you, not the other way around. Every morning. Every evening. After every commitment you make.
+        </p>
+        <div class="chat-demo__features" role="list" aria-label="Xiwoo capabilities">
+          <div class="chat-demo__feature" role="listitem">
+            <div class="chat-demo__feature-icon" aria-hidden="true">🌅</div>
+            <div>
+              <div class="chat-demo__feature-title">Daily Check-ins</div>
+              <div class="chat-demo__feature-desc">Morning planning sessions and evening reflections to keep you aligned with your goals every single day.</div>
+            </div>
+          </div>
+          <div class="chat-demo__feature" role="listitem">
+            <div class="chat-demo__feature-icon" aria-hidden="true">🔔</div>
+            <div>
+              <div class="chat-demo__feature-title">Proactive Follow-ups</div>
+              <div class="chat-demo__feature-desc">Xiwoo remembers every commitment and follows up until it's done. No task slips through the cracks.</div>
+            </div>
+          </div>
+          <div class="chat-demo__feature" role="listitem">
+            <div class="chat-demo__feature-icon" aria-hidden="true">💡</div>
+            <div>
+              <div class="chat-demo__feature-title">Personalized Coaching</div>
+              <div class="chat-demo__feature-desc">Based on your patterns, strengths, and struggles, Xiwoo provides tailored encouragement and strategy.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- PRICING                                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="pricing section" id="pricing" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="pricing__header reveal">
+      <p class="section-tag" aria-hidden="true">💳 Pricing</p>
+      <h2 class="section-title" id="pricing-heading">Start free. Scale as you <span class="gradient-text">execute</span>.</h2>
+      <p class="section-subtitle" style="margin:0 auto 32px">No lock-in, no surprise charges. Cancel anytime.</p>
+    </div>
+    <div class="pricing__toggle-wrap reveal">
+      <div class="pricing__toggle" role="group" aria-label="Billing period toggle">
+        <span class="pricing__toggle-label">Monthly</span>
+        <label class="pricing__toggle-switch" aria-label="Toggle annual billing">
+          <input type="checkbox" class="pricing__toggle-input" id="pricing-toggle" />
+          <span class="pricing__toggle-slider"></span>
+        </label>
+        <span class="pricing__toggle-label">Annual</span>
+        <span class="pricing__save-badge">Save 35%</span>
+      </div>
+    </div>
+
+    <div class="pricing__grid" role="list" aria-label="Pricing plans">
+
+      <!-- Free -->
+      <article class="pricing-card reveal reveal-delay-1" role="listitem">
+        <h3 class="pricing-card__name">Free</h3>
+        <p class="pricing-card__desc">Get a taste of what it's like to have an AI accountability partner.</p>
+        <div class="pricing-card__price">
+          <div class="pricing-card__amount">$0<span>/mo</span></div>
+          <div class="pricing-card__period">Forever free</div>
+        </div>
+        <ul class="pricing-card__features" role="list" aria-label="Free plan features">
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> 1 active goal</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Daily check-ins (limited)</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Basic Xiwoo conversations</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> 7-day memory</li>
+          <li class="pricing-card__feature"><span class="pricing-card__x" aria-hidden="true">✕</span> <span style="color:var(--text-muted)">Proof-based accountability</span></li>
+          <li class="pricing-card__feature"><span class="pricing-card__x" aria-hidden="true">✕</span> <span style="color:var(--text-muted)">Execution Sessions</span></li>
+          <li class="pricing-card__feature"><span class="pricing-card__x" aria-hidden="true">✕</span> <span style="color:var(--text-muted)">Flexiwoo Agents</span></li>
+        </ul>
+        <a class="btn btn-ghost" href="#waitlist" id="free-plan-cta" style="width:100%;justify-content:center">Get Started Free</a>
+      </article>
+
+      <!-- Pro -->
+      <article class="pricing-card pricing-card--featured reveal reveal-delay-2" role="listitem" aria-label="Recommended plan">
+        <div class="pricing-card__badge">Most Popular</div>
+        <h3 class="pricing-card__name">Pro</h3>
+        <p class="pricing-card__desc">Full accountability power for individuals who are serious about execution.</p>
+        <div class="pricing-card__price">
+          <div data-monthly class="pricing-card__amount">$19<span>/mo</span></div>
+          <div data-annual class="pricing-card__amount" style="display:none">$12<span>/mo</span></div>
+          <div class="pricing-card__period">Billed monthly</div>
+        </div>
+        <ul class="pricing-card__features" role="list" aria-label="Pro plan features">
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Unlimited goals</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Proactive daily check-ins</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Full Xiwoo conversations</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Long-term memory (unlimited)</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Proof-based accountability</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Execution Sessions</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Flexiwoo Agents (core)</li>
+        </ul>
+        <a class="btn btn-primary" href="#waitlist" id="pro-plan-cta" style="width:100%;justify-content:center">Start Pro Trial</a>
+      </article>
+
+      <!-- Team -->
+      <article class="pricing-card reveal reveal-delay-3" role="listitem">
+        <h3 class="pricing-card__name">Team</h3>
+        <p class="pricing-card__desc">Bring Xiwoo to your entire team. Shared accountability at scale.</p>
+        <div class="pricing-card__price">
+          <div data-monthly class="pricing-card__amount">$49<span>/mo</span></div>
+          <div data-annual class="pricing-card__amount" style="display:none">$32<span>/mo</span></div>
+          <div class="pricing-card__period">Per workspace · up to 10 users</div>
+        </div>
+        <ul class="pricing-card__features" role="list" aria-label="Team plan features">
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Everything in Pro</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Team accountability board</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Shared goals &amp; projects</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Manager insights &amp; reports</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Full Flexiwoo Agents suite</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Priority support</li>
+          <li class="pricing-card__feature"><span class="pricing-card__check" aria-hidden="true">✓</span> Custom integrations</li>
+        </ul>
+        <a class="btn btn-ghost" href="#waitlist" id="team-plan-cta" style="width:100%;justify-content:center">Contact Sales</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- FINAL CTA                                                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="final-cta section" id="waitlist" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="final-cta__box reveal">
+      <div class="final-cta__owl" aria-hidden="true">🦉</div>
+      <h2 class="final-cta__title" id="cta-heading">
+        Stop planning.<br/><span class="gradient-text">Start executing.</span>
+      </h2>
+      <p class="final-cta__subtitle">
+        Join thousands of people using Xiwoo to finally follow through on the promises they make to themselves.
+      </p>
+      <form class="final-cta__form" id="cta-form" role="form" aria-label="Waitlist signup">
+        <input
+          class="final-cta__email"
+          type="email"
+          placeholder="Enter your email address"
+          required
+          aria-label="Email address for waitlist"
+          id="waitlist-email"
+        />
+        <button class="btn btn-primary" type="submit" id="waitlist-submit">Join Waitlist 🚀</button>
+      </form>
+      <p class="final-cta__note" role="note">No credit card required. Free to start. Be the first to access Flexiwoo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- FOOTER                                                     -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand-logo">
+          <div class="footer__brand-icon" aria-hidden="true">🦉</div>
+          <span class="gradient-text">Flexiwoo</span>
+        </div>
+        <p class="footer__brand-desc">
+          Your AI Accountability Partner for Getting Things Done.<br/>
+          Built for people who are serious about execution.
+        </p>
+        <div class="footer__socials" role="list" aria-label="Social media links">
+          <div class="footer__social" role="listitem" aria-label="Twitter/X" tabindex="0">𝕏</div>
+          <div class="footer__social" role="listitem" aria-label="LinkedIn" tabindex="0">in</div>
+          <div class="footer__social" role="listitem" aria-label="Discord" tabindex="0">⌨</div>
+          <div class="footer__social" role="listitem" aria-label="YouTube" tabindex="0">▶</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Product</div>
+        <ul class="footer__links" role="list">
+          <li><a class="footer__link" href="#features">Features</a></li>
+          <li><a class="footer__link" href="#how-it-works">How It Works</a></li>
+          <li><a class="footer__link" href="#pricing">Pricing</a></li>
+          <li><a class="footer__link" href="#xiwoo">Meet Xiwoo</a></li>
+          <li><a class="footer__link" href="#">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Company</div>
+        <ul class="footer__links" role="list">
+          <li><a class="footer__link" href="#">About</a></li>
+          <li><a class="footer__link" href="#">Blog</a></li>
+          <li><a class="footer__link" href="#">Careers</a></li>
+          <li><a class="footer__link" href="#">Press</a></li>
+          <li><a class="footer__link" href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Resources</div>
+        <ul class="footer__links" role="list">
+          <li><a class="footer__link" href="#">Documentation</a></li>
+          <li><a class="footer__link" href="#">Community</a></li>
+          <li><a class="footer__link" href="#">API</a></li>
+          <li><a class="footer__link" href="#">Status</a></li>
+          <li><a class="footer__link" href="#">Support</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        © 2026 Flexiwoo, Inc. All rights reserved. 🦉 Powered by Xiwoo.
+      </div>
+      <div class="footer__legal" role="list">
+        <a class="footer__legal-link" href="#" role="listitem">Privacy Policy</a>
+        <a class="footer__legal-link" href="#" role="listitem">Terms of Service</a>
+        <a class="footer__legal-link" href="#" role="listitem">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Hidden visually but accessible to screen readers -->
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}</style>
+
+<script src="app.js"></script>
+</body>
+</html>
